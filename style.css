@@ -190,7 +190,7 @@ body {
 }
 
 .btn-primary {
-    background: #f16363(--primary);
+    background: #f16363);
     color: white;
     flex: 1;
     min-width: 180px;

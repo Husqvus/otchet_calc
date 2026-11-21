@@ -190,8 +190,8 @@ body {
 }
 
 .btn-primary {
-    background: var(--primary);
-    color: #f16363;
+    background: #f16363(--primary);
+    color: white;
     flex: 1;
     min-width: 180px;
 }

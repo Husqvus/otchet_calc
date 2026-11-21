@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор % выполнения актов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <span class="logo-icon">📊</span>
+                <span class="logo-text">АктКалькулятор</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link active">Калькулятор</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1 class="hero-title">Расчёт % выполнения по актам</h1>
+            <p class="hero-subtitle">Введите количество актов по плану и факту — получите процент выполнения</p>
+        </section>
+
+        <section class="calculator-card">
+            <div class="form-grid">
+                <div class="field">
+                    <label for="planInput" class="field-label">
+                        <span class="field-icon">📋</span>
+                        План (кол-во актов)
+                    </label>
+                    <input type="text" id="planInput" class="field-input" placeholder="Например: 100" autocomplete="off">
+                </div>
+                <div class="field">
+                    <label for="factInput" class="field-label">
+                        <span class="field-icon">✅</span>
+                        Факт (кол-во актов)
+                    </label>
+                    <input type="text" id="factInput" class="field-input" placeholder="Например: 85" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="actions">
+                <button id="calcBtn" class="btn btn-primary">
+                    <span>Рассчитать</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+                <button id="resetBtn" class="btn btn-ghost">Сбросить</button>
+            </div>
+
+            <div id="resultBox" class="result-box hidden" aria-live="polite">
+                <div class="result-icon" id="resultIcon">🎯</div>
+                <div class="result-content">
+                    <div class="result-title" id="resultTitle">Результат</div>
+                    <div class="result-value" id="resultValue">—</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="log-section">
+            <div class="log-header">
+                <h2 class="log-title">
+                    <span class="log-icon">📜</span>
+                    Журнал запросов
+                </h2>
+                <button id="clearLogBtn" class="btn btn-danger-ghost">
+                    <span>🗑️</span> Очистить журнал
+                </button>
+            </div>
+            <div id="logList" class="log-list">
+                <div id="logEmpty" class="log-empty">
+                    <span class="log-empty-icon">📭</span>
+                    <p>Журнал пуст. Выполните первый расчёт!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2026 АктКалькулятор · Расчёт % выполнения по актам</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
